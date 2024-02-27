@@ -6,7 +6,7 @@ from .serializers import CategorySerializer
 
 # Create your views here.
 
-class CategoryView(viewSets.ViewSet):
+class CategoryViewSet(viewSets.ViewSet):
     """
     This view returns all the Categories
     """
