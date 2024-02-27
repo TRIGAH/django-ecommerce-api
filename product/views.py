@@ -1,16 +1,18 @@
 from django.shortcuts import render
-from rest_framework import Response, viewSets
+from rest_framework import viewsets
+from rest_framework.response import Response
 
 from .models import Category
 from .serializers import CategorySerializer
 
 # Create your views here.
 
-class CategoryViewSet(viewSets.ViewSet):
+class CategoryViewSet(viewsets.ViewSet):
     """
     This view returns all the Categories
     """
+    queryset = Category.objects.all()
+
     def list(self,request):
-        queryset = Category.objects.all()
-        serializer = CategorySerializer(queryset, many=True)
+        serializer = CategorySerializer(self.queryset, many=True)
         return Response(serializer.data)
