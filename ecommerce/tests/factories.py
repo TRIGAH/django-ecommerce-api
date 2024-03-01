@@ -1,8 +1,10 @@
 
+import factory
+
 from product.models import Brand, Category, Product
 
 
-class CategotyFactory():
+class CategotyFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Category
 
