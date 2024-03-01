@@ -4,7 +4,7 @@ import factory
 from product.models import Brand, Category, Product
 
 
-class CategotyFactory(factory.django.DjangoModelFactory):
+class CategoryFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Category
 
