@@ -9,10 +9,15 @@ class TestCategoryModel:
     #Act
         x = category_factory(name="test_cat")
     #Assert
-        x.__str__() == "test_category"
+        x.__str__() == "test_cat"
 
 class TestBrandModel:
-    pass
+    #Arrange
+    def test_str_method(self, brand_factory):
+    #Act
+        x = brand_factory(name="test_brand")
+    #Assert
+        x.__str__() == "test_brand"
 
 
 class TestProductModel:
