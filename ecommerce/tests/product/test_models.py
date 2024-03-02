@@ -21,4 +21,9 @@ class TestBrandModel:
 
 
 class TestProductModel:
-    pass
+    #Arrange
+    def test_str_method(self, brand_factory):
+    #Act
+        x = brand_factory(name="test_product")
+    #Assert
+        x.__str__() == "test_product"
