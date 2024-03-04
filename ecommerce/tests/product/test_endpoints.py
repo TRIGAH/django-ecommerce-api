@@ -4,7 +4,7 @@ pytestmark = pytest.mark.django_db
 
 class TestCategoryEndpoints:
     
-    endpoint = 'api/category/'
+    endpoint = '/api/category/'
 
     def test_category_get(self, category_factory, api_client):
         #Arrange
